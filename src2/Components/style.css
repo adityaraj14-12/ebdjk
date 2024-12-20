@@ -1,0 +1,49 @@
+/* Ensure full-width navbar */
+.navbar {
+    background-color: #eef1f4; /* Choose your color here */
+  }
+  
+  /* Container for the navbar content */
+  .navbar-container {
+    display: flex;            /* Flex container */
+    justify-content: space-between; /* Align items on the left and right */
+    align-items: center;      /* Center items vertically */
+    padding: 0 20px;          /* Adjust horizontal padding */
+  }
+  
+  /* Make the navbar brand (CarRental) stay on the left */
+  .navbar-brand {
+    color: black !important;  /* Change the text color to black */
+    font-size: 1.5rem;        /* Adjust the font size */
+  }
+  
+  /* Navbar items on the right */
+  .navbar-nav {
+    display: flex;            /* Flex container */
+    justify-content: flex-end;/* Align navbar items to the right */
+    margin-left: auto;        /* Push navbar items to the right */
+    list-style-type: none;    /* Remove list bullet points */
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-left: 20px;        /* Space between each navbar item */
+  }
+  
+  .nav-link {
+    color: black !important;  /* Set text color to black */
+    font-size: 1.1rem;        /* Adjust font size */
+    text-decoration: none;    /* Remove underline */
+  }
+  
+  /* Custom styles for the navbar-toggler (hamburger icon) */
+  .navbar-toggler {
+    border-color: black;      /* Set border color for the hamburger icon */
+  }
+  
+  /* Override default background color when active */
+  .navbar-toggler-icon {
+    background-color: black;  /* Change color of the hamburger icon */
+  }
+  
+  

@@ -1,0 +1,238 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* About Us Container */
+#about-us-container {
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: auto;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Section */
+#about-header {
+  background-color: #1e3c72;
+  padding: 2rem 2rem;
+  text-align: center;
+  border-radius: 10px;
+  color: rgba(255, 105, 19, 0.864);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#header-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#header-description {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #ffe600;
+}
+
+/* About and Mission Section */
+#about-section, #mission-section {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+#about-heading, #mission-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+}
+
+#about-description, #mission-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #666;
+  padding: 0 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Ratings Section */
+#ratings-section {
+  background-color: #f9f9f9;
+  padding: 3rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#ratings-title {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: center; /* This ensures the title is centered horizontally */
+  width: 100%; /* Ensures the title takes up the full available width */
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically (if required) */
+}
+#ratings-logos {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.rating-logo {
+  text-align: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 180px;
+}
+
+.rating-logo:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.rating-logo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.rating-logo:hover img {
+  transform: scale(1.1);
+}
+
+.rating-stars {
+  font-size: 1.8rem;
+  color: #f39c12;
+}
+
+.star {
+  color: #f39c12;
+}
+
+.star-empty {
+  color: #ccc;
+}
+/* Team Section */
+#team-section {
+  margin: 5rem 0;
+  text-align: center;
+}
+
+#team-heading {
+  font-size: 2.8rem;  /* Bigger font size */
+  font-weight: bold;  /* Bold font */
+  color: #1e3c72;
+  margin-bottom: 3rem;  /* Additional spacing below the title */
+}
+
+#team-members-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  width: 180px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+.team-member-img img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: 4px solid #f39c12;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member-info {
+  margin-top: 1rem;
+}
+
+.team-member-name {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.team-member-role {
+  font-size: 1.1rem;
+  color: #888;
+}
+
+/* Footer */
+#about-footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #about-header, #about-section, #mission-section {
+    padding: 2rem;
+  }
+
+  #ratings-logos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rating-logo {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 2rem;
+  }
+
+  #team-members-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+

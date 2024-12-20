@@ -1,0 +1,131 @@
+/* Search Container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/040/912/573/non_2x/calendar-event-day-free-png.png');
+    background-size: contain; /* Ensure the image fits without stretching or zooming */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center center; /* Position the image in the center */
+    color: #333;
+    padding-top: 127px;
+    padding-right: 15px;
+    padding-left: 10px;
+    font-family: 'Roboto', sans-serif; /* Choose a clean and modern font */
+  }
+  
+  /* Search Box */
+  .search-box {
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency for better blending with the background */
+    border-bottom-left-radius: 53px; 
+    border-bottom-right-radius: 53px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;/* More rounded corners */
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    width: 445px;
+    height:338px;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  /* Title */
+  .search-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Date Inputs Layout */
+  .date-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* More space between the date inputs */
+  }
+  
+  /* Individual Input Group */
+  .input-groupcalendar {
+    width: 48%; /* To make each date picker take up half the width */
+  }
+  
+  /* Date Picker Input */
+  .date-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* More rounded corners */
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    margin-top: 8px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease; /* Smooth transition on focus */
+  }
+  
+  /* Date Picker Input Focus Effect */
+  .date-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+  }
+  
+  /* Error Message Styling */
+  .error-message {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-align: left;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  /* Search Button Styling */
+  .search-button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded button */
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect for button */
+  }
+  
+  /* Hover Effect for Search Button */
+  .search-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slightly enlarge the button */
+  }
+  
+  /* Focus Effect for Search Button */
+  .search-button:focus {
+    outline: none;
+    box-shadow: 0 0 12px rgba(76, 175, 80, 0.4); /* Soft green glow on focus */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .search-box {
+      width: 90%;
+      padding: 25px;
+    }
+    .search-title {
+      font-size: 1.8rem;
+    }
+    .date-inputs {
+      flex-direction: column;
+    }
+    .input-group {
+      width: 100%;
+    }
+  }
+  

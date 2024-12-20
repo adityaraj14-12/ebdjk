@@ -1,0 +1,165 @@
+/* Container for the page */
+.home-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Filters Section */
+  .filters-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-select,
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  .apply-filter-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .apply-filter-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Cars Section */
+  .cars-container {
+    margin-left: 270px;
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .car-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .car-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .car-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s;
+  }
+  
+  .car-card:hover .car-image {
+    transform: scale(1.1);
+  }
+  
+  .car-details {
+    margin-top: 15px;
+  }
+  
+  .car-details h3 {
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  
+  .car-details p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .car-details .price {
+    font-size: 1.3rem;
+    color: #4CAF50;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  
+  .car-details .location,
+  .car-details .model {
+    font-size: 1.1rem;
+    color: #777;
+  }
+  
+  .car-details .location i,
+  .car-details .model i {
+    margin-right: 8px;
+    color: #4CAF50;
+  }
+  
+  .car-details .book-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .car-details .book-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .loading-spinner {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin-top: 20px;
+    text-align: center;
+    animation: spin 1s infinite linear;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

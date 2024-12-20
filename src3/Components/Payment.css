@@ -1,0 +1,193 @@
+/* General Styling */
+.payment-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('https://thumbs.dreamstime.com/b/booking-car-isolated-cartoon-vector-illustrations-woman-carsharing-mobile-app-holding-smartphone-hands-urban-lifestyle-324207421.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    transition: background 0.5s ease-in-out;
+   
+  }
+ 
+  .payment-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Darker overlay for better contrast */
+    z-index: 1;
+  }
+ 
+  .payment-card {
+    background: #ffffff;
+    border-radius: 20px; /* Softer, more rounded corners */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    width: 100%;
+    max-width: 750px; /* Slightly smaller width for a more compact design */
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+ 
+  .payment-card:hover {
+    transform: translateY(-10px); /* Subtle hover effect to make the card interactive */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+ 
+  .payment-details h5 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 12px 0;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+ 
+  .payment-details {
+    margin-top: 20px;
+  }
+ 
+  .text-gradient {
+    background: -webkit-linear-gradient(45deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2.8rem; /* Larger text for more impact */
+    font-weight: 700;
+    animation: gradientAnimation 3s ease infinite; /* Subtle text animation */
+  }
+ 
+  @keyframes gradientAnimation {
+    0% { background: -webkit-linear-gradient(45deg, #ff6a00, #ee0979); }
+    50% { background: -webkit-linear-gradient(45deg, #ee0979, #ff6a00); }
+    100% { background: -webkit-linear-gradient(45deg, #ff6a00, #ee0979); }
+  }
+ 
+  .proceed-btn {
+    margin-top: 25px;
+    padding: 16px 35px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .proceed-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+ 
+  .car-image {
+    max-width: 270px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+ 
+  .car-image:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+ 
+  .payment-success {
+    margin-top: 30px;
+  }
+ 
+  .payment-success h1 {
+    font-size: 2.8rem;
+    color: #4CAF50;
+    font-weight: 700;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+ 
+  .payment-success p {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: #555;
+  }
+ 
+  .payment-success .btn {
+    background-color: #4CAF50;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+ 
+  .payment-success .btn:hover {
+    background-color: #45a049;
+    transform: translateY(-5px); /* Button hover lift effect */
+  }
+ 
+  /* Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+ 
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .payment-container {
+      padding: 15px;
+    }
+ 
+    .payment-card {
+      padding: 25px;
+      max-width: 100%;
+    }
+ 
+    .payment-details h5 {
+      font-size: 1rem;
+    }
+ 
+    .text-gradient {
+      font-size: 2.4rem;
+    }
+ 
+    .proceed-btn {
+      padding: 14px 28px;
+      font-size: 1.1rem;
+    }
+ 
+    .car-image {
+      max-width: 230px;
+    }
+  }
+ 
+  /* Add a loading spinner for when data is being fetched */
+.loading-spinner {
+    font-size: 2rem;
+    color: #4CAF50;
+    text-align: center;
+    padding: 50px;
+  }
+ 
+  /* Add a hover effect on the payment button */
+  .proceed-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+ 

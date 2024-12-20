@@ -1,0 +1,159 @@
+/* General reset for margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7a18, #af002d, #fdc830);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+  }
+  
+  /* Full viewport center */
+  .about-us-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .about-us-content {
+    background: rgba(255, 255, 255, 0.1);  /* Semi-transparent white background */
+    backdrop-filter: blur(10px);  /* Creates the glass effect */
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+    position: relative;
+  }
+  
+  /* Gradient text with colorful animations */
+  .about-us-content h1 {
+    font-size: 40px;
+    background: linear-gradient(45deg, #ff006e, #ff6600, #ffcc00);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+    animation: gradientText 5s ease-in-out infinite;
+  }
+  
+  .about-us-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ff6363; /* White for paragraph */
+    margin-bottom: 30px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeInText 2s ease-out;
+  }
+  
+  .team {
+    margin-top: 40px;
+  }
+  
+  .team h2 {
+    font-size: 28px;
+    color: #2ecc71; /* Green for team heading */
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .team ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .team ul li {
+    font-size: 20px;
+    color: #3498db; /* Blue for team members */
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    animation: fadeInText 3s ease-out;
+  }
+  
+  .team ul li:nth-child(odd) {
+    animation-delay: 1s;
+  }
+  
+  .team ul li:nth-child(even) {
+    animation-delay: 1.5s;
+  }
+  
+  /* Gradient background animation */
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Text gradient animation */
+  @keyframes gradientText {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Fade-in effects for the content */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-us-content {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .about-us-content h1 {
+      font-size: 30px;
+    }
+  
+    .about-us-content p {
+      font-size: 16px;
+    }
+  
+    .team h2 {
+      font-size: 24px;
+    }
+  
+    .team ul li {
+      font-size: 18px;
+    }
+  }
+  

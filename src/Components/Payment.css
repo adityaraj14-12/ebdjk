@@ -1,0 +1,136 @@
+/* Overall Payment Page Container */
+#payment-page-container {
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden; /* Prevents the background from overflowing */
+}
+
+/* Semi-transparent overlay behind the content */
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+  z-index: -1; /* Ensures it stays behind the content */
+}
+
+/* Payment Card */
+#payment-card {
+  background: rgba(255, 255, 255, 0.9); /* Solid white background */
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 550px;
+  text-align: center;
+  border: 1px solid #f1c40f;
+  position: relative;
+  z-index: 1; /* Keeps it above the overlay */
+}
+
+/* Car Image */
+#car-image {
+  max-width: 250px;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Removed hover effect for box-shadow */
+}
+
+/* Title and Info */
+#card-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f39c12; /* Bright yellow */
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+}
+
+#card-content h5 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Text shadow for better contrast */
+}
+
+#card-content h5 span {
+  font-weight: 400;
+  color: #777;
+}
+
+/* Booking Dates & Price */
+#card-content .dates-price {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#card-content .dates-price .label {
+  font-weight: bold;
+  color: #f39c12; /* Yellow */
+}
+
+/* Payment Button */
+#payment-button {
+  background-color: #f39c12; /* Yellow */
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  box-shadow: none; /* Removed any shadow effect on button */
+}
+
+/* Payment Success Section */
+#payment-success {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 550px;
+  width: 100%;
+  position: relative;
+  z-index: 1; /* Keeps it above the overlay */
+}
+
+#payment-success h1 {
+  color: #f39c12; /* Yellow */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+#payment-success p {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+#payment-success .btn {
+  background-color: #f39c12; /* Yellow */
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: none; /* Removed any shadow effect on button */
+}
