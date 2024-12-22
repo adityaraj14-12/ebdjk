@@ -1,54 +1,37 @@
-/* Ensure full-width navbar */
+/* Navbar Styling */
 .navbar {
-  background-color: #fff;
+  background: linear-gradient(to right, #ffffff, #ffffff, #dbffb5); /* Gradient background */
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 8px 0;
+  padding: 10px 0;
   transition: all 0.3s ease;
 }
 
-/* Container for the navbar content */
-.navbar-container {
+/* Logo Container */
+.logo-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  transform: perspective(500px);
+  transition: all 0.3s ease-in-out;
 }
 
-/* Make the navbar brand (CarRental) stay on the left */
-.navbar-brand {
-  color: #ff4e00 !important;
-  font-size: 1.6rem;
+/* 3D Hover Effect for Logo */
+.logo-container:hover {
+  transform: perspective(500px) rotateY(15deg) scale(1.1);
+}
+
+.logo-text {
+  font-size: 2rem;
+  color: #ff4e00;
   font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.navbar-brand:hover {
-  color: #ff8c42;
-  transform: scale(1.05);
-}
-
-/* Navbar items on the right */
-.navbar-nav {
-  display: flex;
-  justify-content: flex-end;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Navbar item spacing */
-.nav-item {
-  margin-left: 20px;
-  display: flex;
-  align-items: center; /* Ensure all items are aligned */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* Navbar link styling */
@@ -61,86 +44,54 @@
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
+/* Navbar link hover effect */
 .nav-link:hover {
   background-color: #ff4e00;
   color: white !important;
   transform: translateY(-2px);
 }
 
-/* Profile link and icon */
-.profile-link {
+/* Navbar items on the right */
+.navbar-nav {
   display: flex;
-  align-items: center;
-  padding: 8px 12px;
-  border-radius: 50%;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.profile-link:hover {
-  background-color: #ff4e00;
+/* Add hover effect to navbar items */
+.navbar-nav .nav-item:hover .nav-link {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.profile-link svg {
-  margin-right: 8px;
+/* Animated Icons for better impact */
+.nav-icon {
+  transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.nav-link:hover .nav-icon {
+  transform: rotate(20deg);
+  color: white;
+}
+
+/* Space between About and Contact Us */
+.navbar-nav .nav-item + .nav-item {
+  margin-left: 20px; /* Add margin between "About" and "Contact Us" */
+}
+
+/* Dropdown menu */
+.nav-item.dropdown .dropdown-menu {
+  border-radius: 8px;
+}
+.logo-img {
+  width: 90px; /* Adjust logo size */
+  height: auto;
   transition: transform 0.3s ease;
 }
 
-.profile-link:hover svg {
-  transform: rotate(15deg); /* Add a small rotation effect on hover */
-}
-
-/* Logout button */
-.logout-btn {
-  background-color: transparent;
-  border: none;
-  color: #ff4e00;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 30px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.logout-btn:hover {
-  background-color: #ff4e00;
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* Custom styles for the navbar-toggler (hamburger icon) */
-.navbar-toggler {
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.navbar-toggler-icon {
-  background-color: #ff4e00;
-  width: 28px;
-  height: 3px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.navbar-toggler-icon:hover {
-  background-color: #ff8c42;
-}
-
-/* Ensure responsive behavior on mobile */
-@media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .nav-item {
-    margin: 10px 0;
-    text-align: center;
-  }
+/* Hover effect for the logo */
+.logo-img:hover {
+  transform: rotate(360deg);
 }

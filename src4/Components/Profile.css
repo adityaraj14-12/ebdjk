@@ -1,0 +1,195 @@
+/* Profile page container */
+.profile-container {
+  font-family: 'Arial', sans-serif;
+  margin: 20px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(240, 240, 240, 0.8));
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 1200px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-container:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2); /* Add hover effect for container */
+  transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+/* Title */
+.profile-title {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15); /* Text shadow */
+  transition: all 0.3s ease;
+}
+
+.profile-title:hover {
+  color: #f39c12; /* Highlight title on hover */
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Subtitle */
+h2 {
+  color: #555;
+  font-size: 1.8rem;
+  margin-top: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+h2:hover {
+  color: #f39c12; /* Change subtitle color on hover */
+}
+
+/* Table Styles */
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bookings-table:hover {
+  transform: scale(1.03); /* Slight scale effect when hovering over table */
+}
+
+.bookings-table th,
+.bookings-table td {
+  padding: 16px 24px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.bookings-table th {
+  background-color: #f39c12; /* Yellow */
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.bookings-table td {
+  font-size: 1.1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Striped rows for readability */
+.bookings-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.bookings-table tr:hover {
+  background-color: #f1c40f; /* Highlight row on hover */
+}
+
+.bookings-table td:hover {
+  background-color: #f1c40f; /* Yellow on hover */
+  color: #fff;
+}
+
+/* No bookings message */
+.no-bookings {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #888;
+  margin-top: 30px;
+}
+
+/* Profile Avatar */
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  border: 4px solid #f39c12;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+.table-action-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 15px;
+}
+
+.table-action-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Container header */
+.profile-header {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 25px;
+  }
+
+  .profile-title {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .bookings-table th,
+  .bookings-table td {
+    padding: 14px;
+  }
+
+  .no-bookings {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-title {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .bookings-table th,
+  .bookings-table td {
+    padding: 10px;
+  }
+
+  .no-bookings {
+    font-size: 1.1rem;
+  }
+}

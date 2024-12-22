@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, useLocation, Link } from 'react-router-dom';
 import axios from 'axios';
 import './Payment.css';
+import { color } from 'framer-motion';
 
 const Payment = () => {
   const { carId } = useParams();
@@ -22,7 +23,7 @@ const Payment = () => {
   };
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = sessionStorage.getItem('token');
     if (!token) {
       navigate('/login');
     }
@@ -74,7 +75,7 @@ const Payment = () => {
   }, [carId, navigate, carDetails, location.search]);
 
   const handlePayment = () => {
-    setUsername(localStorage.getItem('username'));
+    setUsername(sessionStorage.getItem('username'));
     console.log("Location passed to booking page:", carDetails.location); // Log location before passing it
 
     navigate('/booking', {
@@ -96,12 +97,15 @@ const Payment = () => {
 
   return (
     <div id="payment-page-container">
+      <div id="booking-details-container">
+        <h1>Booking Details</h1>
+      </div>
+
       <div id="overlay"></div>
 
       {!paymentCompleted ? (
         <div id="payment-card">
-          <h1>Payment Page</h1>
-          <div id="card-content">
+          <div id="payment-card-left">
             {carDetails.image && (
               <img
                 id="car-image"
@@ -109,19 +113,27 @@ const Payment = () => {
                 alt={carDetails.carModel}
               />
             )}
-            <h5>Username: {localStorage.getItem('username')}</h5>
-            <h5>Car Model: {carDetails.carModel}</h5>
-            <h5>Location: {carDetails.location}</h5>
-            <h5>Price per day: ${carDetails.price}</h5>
-            <div className="dates-price">
-              <h5 className="label">Booking Dates:</h5>
-              <p>{startDate} to {endDate}</p>
-            </div>
-            {startDate && endDate && <h5>Total Price: ${totalPrice}</h5>}
-            <button id="payment-button" onClick={handlePayment}>
-              Proceed to Payment
-            </button>
+            <h5 style={{ color: 'black' }}><span>  <br/>{carDetails.carModel}</span></h5>
           </div>
+
+          <div id="payment-card-right">
+  <div id="card-content">
+    <h5>Name: <span>{sessionStorage.getItem('name')}</span></h5>
+    <h5>Username: <span>{sessionStorage.getItem('username')}</span></h5>
+   
+    <h5>Location: <span>{carDetails.location}</span></h5>
+    <h5>Price per day: <span>Rs.{carDetails.price}</span></h5>
+    <div className="dates-price">
+      <h5 className="label">Booking Dates:</h5>
+      <p>{startDate} to {endDate}</p>
+    </div>
+    {startDate && endDate && <h5>Total Price: <span>Rs.{totalPrice}</span></h5>}
+    <button id="payment-button" onClick={handlePayment}>
+      Proceed to Payment
+    </button>
+  </div>
+</div>
+
         </div>
       ) : (
         <div id="payment-success">

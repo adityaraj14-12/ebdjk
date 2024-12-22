@@ -1,0 +1,75 @@
+/* Add a logo image next to the brand name */
+/* Gradient Background for Navbar */
+.navbar {
+  background: linear-gradient(to right, #ffffff, #ffffff, #dbffb5); /* Dynamic vibrant gradient */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  /* Add more vibrant colors */
+}
+.logo-img {
+  width: 90px; /* Adjust logo size */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for the logo */
+.logo-img:hover {
+  transform: rotate(360deg);
+}
+
+/* Styling the brand name CarRental with 3D effect */
+.car-rental-text {
+  font-size: 2rem;
+  color: #ff4e00;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* Navbar Styling */
+.navbar {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  transition: all 0.3s ease;
+}
+
+/* Navbar items on the right */
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar link styling */
+.nav-link {
+  color: #333 !important;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #ff4e00;
+  color: white !important;
+  transform: translateY(-2px);
+}

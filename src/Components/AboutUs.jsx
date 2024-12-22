@@ -148,7 +148,7 @@ function AboutUs() {
       </div>
 
       <div id="about-footer">
-        <span id="footer-text">&copy; 2024 Gadi Chahiye. All Rights Reserved.</span>
+        <span id="footer-text">&copy; 2024 Gaadi Chahiye. All Rights Reserved.</span>
       </div>
     </div>
   );

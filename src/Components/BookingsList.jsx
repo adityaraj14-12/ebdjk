@@ -10,7 +10,7 @@ const BookingsList = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const token = localStorage.getItem("token"); // Assuming you store the token in localStorage
+        const token = sessionStorage.getItem("token"); // Assuming you store the token in localStorage
         const response = await axios.get("http://localhost:9090/api/bookings/allBookings", {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -58,23 +58,29 @@ const BookingsList = () => {
         <table className="table table-striped table-bordered">
           <thead className="thead-dark">
             <tr>
+              <th>Name</th>
+              <th>User Email</th>
+              <th>Contact</th>
               <th>Car Model</th>
+              <th>Price</th>
               <th>Start Date</th>
               <th>End Date</th>
-              <th>Price</th>
-              <th>User Email</th>
               <th>Location</th>
             </tr>
           </thead>
           <tbody>
             {bookings.map((booking) => (
               <tr key={booking.id}>
+                <td>{booking.name}</td>
+                <td>{booking.userEmail}</td>
+                <td>{booking.contact}</td>
                 <td>{booking.carModel}</td>
+                <td>{booking.price}</td>
                 <td>{booking.startDate}</td>
                 <td>{booking.endDate}</td>
-                <td>{booking.price}</td>
-                <td>{booking.userEmail}</td>
-                <td>{booking.location}</td>
+               <td>{booking.location}</td>
+              
+                
               </tr>
             ))}
           </tbody>

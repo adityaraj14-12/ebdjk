@@ -1,0 +1,71 @@
+/* Global reset and styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  margin: 0;
+}
+
+/* Main container that holds the page layout */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full screen height */
+  width: 100%;
+}
+
+/* Content container that allows scrolling */
+.content-container {
+  flex: 1; /* Makes the content container take up all available space */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding: 20px; /* Adjusted for better spacing */
+  background-color: #f3f3f3; /* Optional background color */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Home page container */
+.home-container {
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ff4e00;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Ensure there is no gap between content and footer/navbar */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-container {
+  flex: 1; /* Increase the flex value */
+  min-height: 80vh; /* Optionally add a minimum height */
+}
+
+
+/* Optional: to make the image cover the full background */
+.search-container {
+/*  background-image: url('https://images.pexels.com/photos/21014/pexels-photo.jpg');*/
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

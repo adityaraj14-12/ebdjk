@@ -1,0 +1,225 @@
+/* Container for the page */
+.home-page {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+/* Filters Section - Sidebar */
+.filter-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;  /* Slightly wider for better spacing */
+  height: 100vh;
+  background: linear-gradient(145deg, #ffffff, #dbffb5);  /* Soft gradient background */
+  padding: 30px;
+  border-right: 1px solid #ddd;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  border-radius: 15px 0 0 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+/* Title for Filters Section */
+.filter-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 58px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Floating input fields with smooth shadow */
+.filter-input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.filter-input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  outline: none;
+}
+
+/* Price Filters with modern look */
+.price-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Filter Buttons with Hover Effect */
+.filter-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filter-button:hover {
+  background-color: #45a049;
+  transform: translateY(-5px);  /* More pronounced hover effect */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Adding Icons in Buttons */
+.filter-button i {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.filter-button:hover i {
+  transform: scale(1.1);
+}
+
+/* Add subtle animation when the sidebar appears */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.filter-section {
+  animation: slideIn 0.5s ease-out;  /* Add animation on load */
+}
+
+/* Cars Display Section */
+.cars-display {
+  margin-left: 370px;
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for car card container */
+.car-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.car-card {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 380px;
+}
+
+.car-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  background-color: #f1f1f1;
+}
+
+.car-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.car-card:hover .car-image {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.car-info {
+  margin-top: 20px;
+}
+
+.car-title {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #5b5135;
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.car-location, .car-price {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.car-price {
+  font-size: 1.5rem;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.book-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.book-button:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+  color: red;
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+
+.loading-spinner {
+  font-size: 1.7rem;
+  color: #4CAF50;
+  margin-top: 20px;
+  text-align: center;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import {jwtDecode} from  'jwt-decode'; // Fixed import
-import { FaUserCircle } from 'react-icons/fa';
+import { jwtDecode } from 'jwt-decode'; // Fixed import
+import { FaUserCircle, FaInfoCircle, FaPhoneAlt, FaSignInAlt, FaUserPlus } from 'react-icons/fa';
 import './style.css'; // Ensure this file doesn't override Bootstrap styles unnecessarily
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -13,7 +12,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const checkLoginStatus = () => {
-    const token = localStorage.getItem('token');
+    const token = sessionStorage.getItem('token');
     if (token) {
       try {
         const decodedToken = jwtDecode(token);
@@ -40,8 +39,8 @@ const Navbar = () => {
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('username');
+    sessionStorage.removeItem('token');
+    sessionStorage.removeItem('username');
     setIsLoggedIn(false);
     setUsername('');
     navigate('/login');
@@ -49,10 +48,20 @@ const Navbar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-      <div className="container">
-        <Link className="navbar-brand fw-bold" to="/">
-          CarRental
+           <div className="container">
+             <Link className="navbar-brand d-flex align-items-center" to="/">
+               {/* Logo */}
+               <img
+                 src="https://th.bing.com/th/id/OIP.6DF--3U8z5sl-b7ihvYYkwHaEK?rs=1&pid=ImgDetMain"
+                 alt="Gadhi Chaiya"
+                 className="logo-img me-2"
+               />
+
+            <span className="logo-text">CarRental</span>
+          
         </Link>
+
+        
 
         <button
           className="navbar-toggler"
@@ -70,11 +79,13 @@ const Navbar = () => {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/about">
+                <FaInfoCircle size={20} className="nav-icon me-2" />
                 About
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/contact">
+                <FaPhoneAlt size={20} className="nav-icon me-2" />
                 Contact Us
               </Link>
             </li>
@@ -114,11 +125,13 @@ const Navbar = () => {
               <>
                 <li className="nav-item">
                   <Link className="nav-link" to="/login">
+                    <FaSignInAlt size={20} className="nav-icon me-2" />
                     Login
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/register">
+                    <FaUserPlus size={20} className="nav-icon me-2" />
                     Register
                   </Link>
                 </li>
